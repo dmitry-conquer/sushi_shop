@@ -1,0 +1,87 @@
+.modal-login {
+   position: fixed;
+   z-index: 999;
+   visibility: hidden;
+   opacity: 0;
+   transition: all 0.3s ease 0s;
+   pointer-events: none;
+   inset: 0;
+   &._show-modal {
+      overflow: auto;
+      background-color: rgb(0 0 0 / 50%);
+      visibility: visible;
+      opacity: 1;
+      pointer-events: auto;
+   }
+   &__body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 100%;
+      @media (max-width: ($sm)) {
+         padding-right: 15px;
+         padding-left: 15px;
+      }
+   }
+   &__content {
+      position: relative;
+      width: 100%;
+      max-width: 360px;
+      color: $black;
+      background-color: $white;
+      border-radius: 50px;
+      transform: scale(0);
+      visibility: hidden;
+      transition: all 0.3s ease 0s;
+      display: flex;
+      flex-direction: column;
+      padding: 60px 40px 60px 40px;
+      &._show-modal {
+         transform: scale(1);
+         visibility: visible;
+      }
+   }
+   &__close {
+      position: absolute;
+      top: percent(37, 360);
+      right: percent(37, 360);
+      padding: 10px;
+      svg {
+         width: 16px;
+         height: 16px;
+      }
+   }
+   &__title {
+      text-align: center;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: lh(25, 20);
+      margin-bottom: em(25, 20);
+   }
+   &__form {}
+   &__input {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $white;
+      border: 1px solid $gray-light;
+      border-radius: 4px;
+      margin-bottom: 12px;
+      height: 48px;
+      width: 100%;
+      padding: 0 8px;
+      transition: border-color .2s ease 0s;
+      &:focus-within{
+         border-color: $primary-color-dark;
+      }
+      input {
+         width: 100%;
+         outline: 0;
+         border: 0;
+      }
+   }
+   &__button {
+      width: 100%;
+   }
+}

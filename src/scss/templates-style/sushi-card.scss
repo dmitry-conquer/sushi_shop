@@ -1,0 +1,198 @@
+.product-item {
+   position: relative;
+   background-color: $white;
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   &__label-desc {
+      position: absolute;
+      z-index: 2;
+      left: 12px;
+      top: 12px;
+      @media (max-width: ($md)) {
+         left: 6px;
+         top: 6px;
+      }
+      li {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         &:not(:last-child) {
+            margin-bottom: 6px;
+         }
+         img {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+         }
+         p {
+            margin-top: em(4, 12);
+            font-weight: 600;
+            font-size: 12px;
+            line-height: lh(10, 12);
+            @media (max-width: ($md)) {
+               display: none;
+            }
+         }
+      }
+   }
+   &__label-type {
+      position: absolute;
+      z-index: 2;
+      right: 12px;
+      top: 12px;
+      @media (max-width: ($md)) {
+         right: 6px;
+         top: 6px;
+      }
+      p {
+         @include av('width', 52, 25);
+         @include av('height', 52, 25);
+         border-radius: 50%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         color: $white;
+         font-weight: 800;
+         @include av('font-size', 16, 10);
+         line-height: lh(26, 20);
+         &:not(:last-child) {
+            margin-bottom: 15px;
+         }
+      }
+   }
+   &__top {
+      background-color: $color-label-top;
+   }
+   &__new {
+      background-color: $color-label-new;
+   }
+   &__image {
+      margin-bottom: 30px;
+      max-height: 256px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      img {
+         width: 80%;
+         transition: transform .3s ease 0s;
+         @media (any-hover: hover) {
+            &:hover {
+               transform: scale(1.1);
+            }
+         }
+      }
+   }
+   &__main {
+      padding: 0px 24px 24px 24px;
+   }
+   &__name {
+      font-weight: 600;
+      @include av('font-size', 24, 20);
+      line-height: lh(30, 24);
+      margin-top: em(20, 24);
+      margin-bottom: em(4, 24);
+   }
+   &__products {
+      font-size: 14px;
+      line-height: lh(17, 14);
+   }
+   &__footer {
+      @include av('margin-top', 50, 30);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+   }
+   &__old-price {
+      font-size: 14px;
+      line-height: lh(17, 14);
+      text-decoration-line: line-through;
+      color: $gray;
+   }
+   &__new-price {
+      font-weight: 700;
+      @include av('font-size', 32, 20);
+      line-height: lh(40, 32);
+      white-space: nowrap;
+   }
+   &__button {
+      min-height: 44px;
+      @include av('padding-left', 59, 12, $container-max-width, 991.98);
+      @include av('padding-right', 59, 12, $container-max-width, 991.98);
+      width: 100%;
+   }
+}
+.info-product {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   gap: 20px;
+   &__weight {
+      white-space: nowrap;
+      font-size: 14px;
+      line-height: lh(17, 14);
+      color: $gray;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+   }
+   &__size {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      gap: 2px 12px;
+      label>span {
+         border-radius: 4px;
+         padding: 4px 8px;
+         background-color: $gray-lighter;
+         color: $gray;
+         transition: all .3s ease 0s;
+         white-space: nowrap;
+      }
+      label>input:checked~span {
+         background-color: $primary-color;
+         color: $white;
+      }
+   }
+   &__weight-value {
+      position: relative;
+      &::after {
+         content: '';
+         position: absolute;
+         width: 4px;
+         height: 4px;
+         border-radius: 50%;
+         background-color: $primary-color;
+         top: 50%;
+         transform: translateY(-50%);
+         right: -10px;
+      }
+   }
+   &__price {
+      font-weight: 600;
+      font-size: 12px;
+      line-height: lh(15, 12);
+      color: $gray;
+      margin-bottom: em(2, 12);
+      grid-column: 1 / 3;
+      justify-self: end;
+   }
+   &__sm {
+      &_small {
+         position: relative;
+         &::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            top: 50%;
+            right: calc(-13px / 2);
+            transform: translateY(-50%);
+            background-color: $primary-color;
+         }
+      }
+   }
+}

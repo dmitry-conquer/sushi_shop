@@ -1,0 +1,79 @@
+<div class="modal-comments _modal-wrapper" id="modal-comments">
+   <div class="modal-comments__body _modal-body">
+      <div class="modal-comments__content _modal-content" role="dialog" aria-hidden='true' aria-modal="true">
+         <button class="modal-comments__close _close-modal" aria-label="Закрити вікно">
+            <svg class='icon-close' aria-hidden='true'>
+               <use href='./sprites/sprite.svg#icon-close'></use>
+            </svg>
+         </button>
+         <p class="modal-comments__title" id="modal-comments-title">Залишити відгук</p>
+         <form action="#" class="modal-comments__form">
+            <div class="modal-comments__rate comments-rating">
+               <p class="comments-rating__title">Ваша оцінка</p>
+               <div class="comments-rating__items" tabindex="0" aria-label="Оцените по 5 бальной шкале" id="comments-rating">
+                  <input class="comments-rating__input" type="radio" name="comments-rating" value="5" id="comments-rating-item-5" />
+                  <label class="comments-rating__label" for="comments-rating-item-5" aria-label="Оценка 5: отлично">
+                     <svg class="icon-star">
+                        <use href="./sprites/sprite.svg#icon-star"></use>
+                     </svg>
+                  </label>
+                  <input class="comments-rating__input" type="radio" name="comments-rating" value="4" id="comments-rating-item-4" />
+                  <label class="comments-rating__label" for="comments-rating-item-4" aria-label="Оценка 4: хорошо">
+                     <svg class="icon-star">
+                        <use href="./sprites/sprite.svg#icon-star"></use>
+                     </svg>
+                  </label>
+                  <input class="comments-rating__input" type="radio" name="comments-rating" value="3" id="comments-rating-item-3" />
+                  <label class="comments-rating__label" for="comments-rating-item-3" aria-label="Оценка 3: удовлитворительно">
+                     <svg class="icon-star">
+                        <use href="./sprites/sprite.svg#icon-star"></use>
+                     </svg>
+                  </label>
+                  <input class="comments-rating__input" type="radio" name="comments-rating" value="2" id="comments-rating-item-2" />
+                  <label class="comments-rating__label" for="comments-rating-item-2" aria-label="Оценка 2: плохо">
+                     <svg class="icon-star">
+                        <use href="./sprites/sprite.svg#icon-star"></use>
+                     </svg>
+                  </label>
+                  <input class="comments-rating__input" type="radio" name="comments-rating" value="1" id="comments-rating-item-1" />
+                  <label class="comments-rating__label" for="comments-rating-item-1" aria-label="Оценка 1: ужасно">
+                     <svg class="icon-star">
+                        <use href="./sprites/sprite.svg#icon-star"></use>
+                     </svg>
+                  </label>
+               </div>
+            </div>
+            <div class="modal-comments__textarea">
+               <label for="comment" class="visually-hidden">поле для вводу
+                  коментарю</label>
+               <textarea name="comment" id="comment" placeholder="Напишіть Ваш відгук" data-required aria-required></textarea>
+            </div>
+            <div class="modal-comments__input">
+               <label for="comment-tel" class="visually-hidden">Вкажіть Ваш
+                  номер телефону</label>
+               <input type="text" inputmode="tel" id="comment-tel" placeholder="Телефон" data-required='tel' aria-required data-mask='tel'>
+            </div>
+            <div class="modal-comments__input">
+               <label for="name-sername" class="visually-hidden">Вкажіть Ваше
+                  ім'я та прізвище</label>
+               <input type="text" id="name-sername" placeholder="Ім'я та прізвище" data-required aria-required>
+            </div>
+            <div class="modal-comments__file file-comments">
+               <label class="file-comments__button">
+                  <input type="file" class="visually-hidden" accept=".jpg, .jpeg, .png" aria-required data-required>
+                  <span class="file-comments__text">Додати зображення</span>
+                  <span class="file-comments__add">
+                     <svg class='icon-clip' aria-hidden='true'>
+                        <use href='./sprites/sprite.svg#icon-clip'></use>
+                     </svg>
+                  </span>
+               </label>
+            </div>
+            <div class="modal-comments__image-container _files-container">
+            </div>
+            <button class="modal-comments__button button-main" type="submit">Залишити
+               відгук</button>
+         </form>
+      </div>
+   </div>
+</div>

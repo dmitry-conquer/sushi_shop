@@ -1,0 +1,41 @@
+/* Imported plugins styles  */
+@import "../../node_modules/swiper/swiper";
+@import "../../node_modules/swiper/modules/navigation/navigation";
+@import "../../node_modules/swiper/modules/parallax/parallax";
+
+// @import '../../node_modules/swiper/modules/autoplay/autoplay.scss';
+// @import '../../node_modules/swiper/modules/pagination/pagination.scss';
+// @import '../../node_modules/swiper/modules/scrollbar/scrollbar.scss';
+// @import "../../node_modules/nouislider/dist/nouislider.min";
+// @import '../../node_modules/aos/src/sass/aos.scss';
+// @import '../../node_modules/choices.js/src/styles/choices.scss';
+
+/* Config files */
+@import
+  "./config/functions",
+  "./config/variables",
+  "./config/mixins";
+
+/* Grobal styles */
+@import
+  "./common/fonts",
+  "./common/normalize",
+  "./common/global";
+
+/* Templates style */
+@import
+  "./templates-style/header",
+  "./templates-style/modal",
+  "./templates-style/modal-comments",
+  "./templates-style/sushi-card",
+  "./templates-style/offer-cart",
+  "./templates-style/footer";
+
+/* Pages */
+@import
+  "index-page",
+  "catalog-page",
+  "card-page",
+  "cart-page",
+  "delivery-page",
+  "404-page";

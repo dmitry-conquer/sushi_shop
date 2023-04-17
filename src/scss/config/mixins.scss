@@ -1,0 +1,38 @@
+/* Adaptive value from -- to */
+@mixin av($property, $startSize, $minSize, $widthFrom: $container-max-width, $widthTo: 320) {
+  $addSize: $startSize - $minSize;
+
+  #{$property}: calc(#{$minSize + px} + #{$addSize} * (100vw - #{$widthTo + px}) / #{($widthFrom) - ($widthTo)});
+
+  @media (max-width: ($widthTo + px)) {
+    #{$property}: $minSize + px;
+  }
+
+  @media (min-width: ($widthFrom + px)) {
+    #{$property}: $startSize + px;
+  }
+}
+
+/* === Подключение шрифтов === */
+@mixin font($font-name, $file-name, $weight, $style) {
+  @font-face {
+    font-weight: #{$weight};
+    font-family: $font-name;
+    font-style: #{$style};
+    src: url("../fonts/#{$file-name}.woff2") format("woff2");
+    font-display: swap;
+  }
+}
+
+/* === Элемент доступен только для вспомогательных технологий (скринридеры + google)=== */
+@mixin visually-hidden() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+}

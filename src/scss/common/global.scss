@@ -1,0 +1,217 @@
+/* === For REM === */
+
+html {
+   scroll-behavior: smooth;
+   scroll-padding-top: 70px;
+   // font-size: 62.5%;
+}
+
+// > === General styles ===
+body {
+   color: $black;
+   font-weight: 400;
+   font-size: 16px;
+   font-family: "TT Interfaces", sans-serif;
+   background-color: $gray-lightest;
+
+
+   padding-top: 173px;
+   @media (max-width: ($lg)) {
+      padding-top: 163px;
+   }
+
+
+
+
+   &._lock {
+      overflow: hidden;
+      touch-action: none;
+   }
+}
+
+// > === Wrapper ===
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   min-height: 100%;
+   overflow: hidden;
+   main {
+      flex: 1 1 auto;
+   }
+}
+
+// > === Main container styles ===
+[class*="__container"] {
+   max-width: $container-max-width + px;
+   margin: 0 auto;
+   padding: 0 $container-padding + px;
+}
+
+// > === Responsive images ===
+._imw {
+   img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+}
+
+._ibg {
+   position: relative;
+   img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+}
+
+.visually-hidden {
+   @include visually-hidden;
+}
+
+.button-wrapper {
+   display: flex;
+   justify-content: center;
+}
+
+
+// >> - - - - [current project global styles] - - - -
+
+
+// - - - - - - - [headlines] - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+h2 {
+   font-weight: 600;
+   @include av('font-size', 48, 24);
+   margin-bottom: em(40, 48);
+   line-height: lh(60, 48);
+}
+
+h3 {
+   font-weight: 600;
+   font-size: 24px;
+   line-height: lh(30, 24);
+   margin-bottom: em(4, 24);
+}
+
+// - - - - - - - [buttons] - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+.button-main {
+   text-align: center;
+   overflow: hidden;
+   color: $white;
+   font-weight: 700;
+   font-size: 14px;
+   line-height: lh(18, 14);
+   background: $primary-color url("../img/decor/bg-btn.png") center / cover no-repeat;
+   border: 1px solid $primary-color-dark;
+   border-radius: 2px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   @include av("padding-top", 13, 10);
+   @include av("padding-bottom", 13, 10);
+   @include av("padding-left", 60, 35);
+   @include av("padding-right", 60, 35);
+   &:active {
+      transform: translateY(2px);
+   }
+}
+
+.button-slider {
+   position: absolute;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: $white;
+   border-radius: 50%;
+   box-shadow: 0 4px 20px rgb(0 0 0 / 8%);
+   transform: translateY(-50%);
+   @include av("width", 80, 50, $container-max-width, 767.98);
+   @include av("height", 80, 50, $container-max-width, 767.98);
+   svg {
+      transition: fill 0.3s ease 0s;
+      fill: $primary-color;
+      @include av("width", 36, 25, $container-max-width, 767.98);
+      @include av("height", 36, 25, $container-max-width, 767.98);
+   }
+   &_prev {
+      left: 0;
+      transform: translateY(-50%);
+      svg {
+         transform: rotate(-90deg);
+      }
+   }
+   &_next {
+      right: 0;
+      transform: translateY(-50%);
+      svg {
+         transform: rotate(90deg);
+      }
+   }
+   &.swiper-button-disabled {
+      svg {
+         fill: $gray;
+      }
+   }
+}
+
+// - - - - - - - [page-navigation] - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+.page-navigation {
+   padding-top: 30px;
+   margin-bottom: 25px;
+   &__container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 8px;
+      svg {
+         width: 26px;
+         height: 26px;
+         fill: $primary-color;
+         margin-right: 20px;
+         transform: rotate(-90deg);
+      }
+      a {
+         display: flex;
+         align-items: center;
+         font-size: 14px;
+         line-height: lh(17, 14);
+         @media (any-hover: hover) {
+            &:hover {
+               text-decoration: underline;
+            }
+         }
+      }
+   }
+
+}
+
+
+// - - - - - - - [rating style] - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+.rating {
+   position: relative;
+   width: 96px;
+   &__bar {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 55%;
+      height: 100%;
+      overflow: hidden;
+   }
+}
+.icon-stars {
+   width: 96px;
+   height: 16px;
+   fill: none;
+   stroke: $primary-color;
+   stroke-width: 1px;
+   &.main-starts {
+      fill: $primary-color;
+      stroke: none;
+      stroke-width: 0;
+   }
+}

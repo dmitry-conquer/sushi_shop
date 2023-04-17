@@ -1,0 +1,105 @@
+.footer {
+   @include av('padding-top', 35, 15);
+   @include av('padding-bottom', 19, 10);
+   background-color: $black;
+   color: $white;
+   &__inner {
+      display: grid;
+      grid-template-columns: percent(112, $container-layout-width) auto percent(402, $container-layout-width) auto;
+      grid-template-rows: 1fr;
+      @media (max-width: ($lg)) {
+         grid-template-columns: 1fr;
+      }
+      gap: 35px;
+      align-items: center;
+      @media (max-width: ($lg)) {}
+   }
+   &__categories {
+      display: flex;
+      flex-wrap: wrap;
+      @include av('column-gap', 40, 15, $container-max-width, 991.98);
+      row-gap: 20px;
+      a {
+         transition: color .3s ease 0s;
+         @media (any-hover: hover) {
+            &:hover {
+               color: $primary-color;
+            }
+         }
+      }
+   }
+   &__info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      @media (max-width: ($lg)) {
+         align-items: flex-start;
+      }
+   }
+   &__phone {
+      white-space: nowrap;
+      text-align: right;
+      font-weight: 700;
+      @include av('font-size', 24, 20);
+      line-height: lh(30, 24);
+      margin-bottom: em(7, 24);
+      transition: color .3s ease 0s;
+      @media (any-hover: hover) {
+         &:hover {
+            color: $primary-color;
+         }
+      }
+   }
+   &__time {
+      font-size: 16px;
+      line-height: lh(20, 16);
+   }
+
+   &__copyright {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 20px;
+      font-weight: 300;
+      font-size: 12px;
+      line-height: lh(15, 12);
+      @media (max-width: ($sm)) {
+         justify-content: center;
+      }
+   }
+}
+.menu-footer {
+   &__pages {
+      display: flex;
+      @include av('column-gap', 40, 12, $container-max-width, 991.98);
+      margin-bottom: 12px;
+      text-align: center;
+      a {
+         transition: color .3s ease 0s;
+         @media (any-hover: hover) {
+            &:hover {
+               color: $primary-color;
+            }
+         }
+      }
+   }
+   &__socials {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      a {
+         @media (any-hover: hover) {
+            &:hover {
+               svg {
+                  fill: $primary-color;
+               }
+            }
+         }
+      }
+      svg {
+         fill: $white;
+         width: 24px;
+         height: 24px;
+         transition: fill .3s ease 0s;
+      }
+   }
+}

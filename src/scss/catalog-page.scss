@@ -1,0 +1,171 @@
+.catalog {
+
+   @include av('margin-bottom', 100, 40);
+   &__container {
+      position: relative;
+   }
+   &__image-decor {
+      position: absolute;
+      top: 50%;
+      right: -25%;
+      @include av('width', 450, 200);
+   }
+   &__title {
+      font-weight: 600;
+      @include av('font-size', 40, 32);
+      line-height: lh(50, 40);
+      margin-bottom: em(20, 40);
+   }
+   &__body {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 24px;
+   }
+}
+.filter-catalog {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 24px;
+   gap: 20px;
+   flex-wrap: wrap;
+   &__left {}
+   &__ingredients {
+      margin-bottom: 5px;
+   }
+   &__list {
+      display: flex;
+      gap: 4px;
+      flex-wrap: wrap;
+   }
+   &__item {}
+   &__item-content {
+      transition: transform .3s ease 0s;
+      @media (any-hover: hover) {
+         &:hover {
+            transform: scale(1.1);
+         }
+      }
+      flex: 0 0 48px;
+      border: 1px solid $gray-light;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 20px;
+      svg {
+         width: 24px;
+         height: 24px;
+      }
+   }
+   &__item-label {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 7px;
+      line-height: lh(8, 7);
+      display: flex;
+      align-items: center;
+      text-align: center;
+      text-transform: uppercase;
+      color: $white;
+      &_top {
+         background-color: $color-label-top;
+      }
+      &_new {
+         background-color: $color-label-new;
+      }
+      &_sale {
+         background-color: $primary-color-dark;
+         font-size: 14px;
+      }
+   }
+   &__item-text {}
+
+   &__type {}
+   &__right {
+      flex: 0 1 300px;
+   }
+   &__sort {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      label {
+         align-self: flex-start;
+         font-weight: 500;
+         font-size: 14px;
+         line-height: lh(17, 14);
+         margin-bottom: em(8, 14);
+         color: $gray;
+      }
+      select {
+         padding: 0 20px;
+         border: 1px solid $gray;
+         width: 100%;
+         min-height: 48px;
+         border-radius: 8px;
+         appearance: none;
+         background: url("../img/decor/select-arrow.svg") right center / 15px no-repeat;
+         background-position-x: calc(100% - 20px);
+      }
+   }
+}
+
+// - - - - - - - [delivery] - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.delivery {
+   @include av('padding-bottom', 88, 40);
+   &__container {
+      position: relative;
+      display: grid;
+      justify-items: center;
+      @media (min-width: ($md)) {
+         align-items: center;
+         justify-content: space-between;
+         grid-template-columns: 1fr percent(514, $container-layout-width);
+      }
+      row-gap: 40px;
+      @include av('column-gap', 156, 30, $container-max-width, 991.98);
+   }
+   &__content {}
+   &__title {
+      position: relative;
+      display: flex;
+      gap: 16px;
+      svg {
+         width: 64px;
+         height: 64px;
+      }
+   }
+   &__text {
+      font-weight: 300;
+      @include av('font-size', 16, 14);
+      line-height: lh(32, 20);
+   }
+   &__image {
+      position: relative;
+      z-index: 2;
+      @media (max-width: ($md)) {
+         width: 70%;
+      }
+      @media (max-width: ($sm)) {
+         width: 100%;
+      }
+   }
+   &__image-out {
+      position: absolute;
+      top: 50%;
+      transform: translate(-70px, -50%);
+      left: 100%;
+      width: 336px;
+      height: 419px;
+      @media (max-width: ($md)) {
+         display: none;
+      }
+   }
+}

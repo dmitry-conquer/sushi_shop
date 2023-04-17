@@ -1,0 +1,35 @@
+$container-layout-width: 1225; // Ширина контейнера по макету
+$container-padding: 15; // Отступы у контейнера (по 15px слева и справа, 0 = нет отступа)
+
+// Ширина контейнера + padding (0 = нет ограничения)
+$container-max-width: calc($container-layout-width + ($container-padding * 2));
+$xl-header-top: 90px;
+$lg-header-top: 80px;
+$md-header-top: 50px;
+$sm-header-top: 45px;
+$xl-header-bottom: 83px;
+$lg-header-bottom: 70px;
+$md-header-bottom: 50px;
+$sm-header-bottom: 45px;
+$xl: 1199.98px;
+$lg: 991.98px;
+$md: 767.98px;
+$sm: 575.98px;
+
+/* Brand colors */
+$primary-color-light: #fffaf4;
+$primary-color: #e07153;
+$primary-color-dark: #c95c3f;
+$white: #fff;
+$black: #1b1b1b;
+$gray-lightest: #fbfbfb;
+$gray-lighter: #f5f5f5;
+$gray-light: #e2e1e1;
+$gray: #b7b7b7;
+$gray-blue: #f5f9fa;
+
+/* Additional colors */
+$color-label-top: #a1dcdc;
+$color-label-new: #6dd8b1;
+$color-green-area: #7E9E1E;
+$color-yellow-area: #F1C400;

@@ -1,0 +1,41 @@
+.not-found {
+
+   @include av('margin-top', 64, 30);
+   @include av('margin-bottom', 150, 50);
+   &__inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+   }
+   &__image {
+      margin-bottom: 42px;
+   }
+   &__content {
+      max-width: 640px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+   }
+   &__title {
+      font-weight: 500;
+      @include av('font-size', 36, 26);
+      line-height: lh(45, 36);
+      margin-bottom: em(8, 36);
+   }
+   &__text {
+      @include av('font-size', 20, 18);
+      line-height: lh(30, 20);
+      margin-bottom: em(25, 20);
+   }
+   &__button {
+      padding: 0;
+      height: 48px;
+      width: 100%;
+      max-width: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+}
