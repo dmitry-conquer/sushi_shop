@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="uk">
+@@include('templates/head.html', { 'title': 'Доставка' })
+
+<body>
+   <div class="wrapper">
+      @@include('templates/header.html', { })
+      <main>
+         <h1 class="visually-hidden">Інформація про доставку та оплату</h1>
+         <section class="delivery-info">
+            <div class="delivery-info__container">
+               <h2 class="delivery-info__title">Доставка</h2>
+               <div class="delivery-info__areas areas-delivery">
+                  <div class="areas-delivery__item">
+                     <div class="areas-delivery__image _imw">
+                        <img src="./img/content/delivery/img1.png" loading="lazy" alt="суши рисунок">
+                     </div>
+                     <div class="areas-delivery__content">
+                        <h3 class="areas-delivery__title areas-delivery__title_green">Зелена зона</h3>
+                        <dl class="areas-delivery__info">
+                           <div class="areas-delivery__point">
+                              <dt>Доставка:</dt>
+                              <dd>до 25 хв</dd>
+                           </div>
+                           <div class="areas-delivery__point">
+                              <dt>Мінімальна сума замовлення:</dt>
+                              <dd>300 грн</dd>
+                           </div>
+                           <div class="areas-delivery__point">
+                              <dt>Доставка</dt>
+                              <dd>Безкоштовно</dd>
+                           </div>
+                        </dl>
+                     </div>
+                  </div>
+                  <div class="areas-delivery__item">
+                     <div class="areas-delivery__image _imw">
+                        <img src="./img/content/delivery/img2.png" loading="lazy" alt="суши рисунок">
+                     </div>
+                     <div class="areas-delivery__content">
+                        <h3 class="areas-delivery__title areas-delivery__title_yellow">Жовта зона</h3>
+                        <dl class="areas-delivery__info">
+                           <div class="areas-delivery__point">
+                              <dt>Доставка:</dt>
+                              <dd>до 59 хв</dd>
+                           </div>
+                           <div class="areas-delivery__point">
+                              <dt>Мінімальна сума замовлення:</dt>
+                              <dd>500 грн</dd>
+                           </div>
+                           <div class="areas-delivery__point">
+                              <dt>Доставка</dt>
+                              <dd>Безкоштовно</dd>
+                           </div>
+                        </dl>
+                     </div>
+                  </div>
+               </div>
+               <div class="delivery-info__map map-delivery _imw">
+                  <div class="map-delivery__search">
+                     <label class="visually-hidden" for="delivery-search">Виберіть свою адресу</label>
+                     <input type="text" id="delivery-search" placeholder="Виберіть адресу">
+                  </div>
+                  <img src="./img/content/delivery/map-big.jpg" loading="lazy" alt="мапа">
+                  <div class="map-delivery__big-area _imw">
+                     <img src="./img/content/cart/area-big.png" loading="lazy" alt="більша зона доставки">
+                  </div>
+                  <div class="map-delivery__small-area _imw">
+                     <img src="./img/content/cart/area-small.png" loading="lazy" alt="менша зона доставки">
+                  </div>
+                  <svg class='icon-location' aria-hidden='true'>
+                     <use href='./sprites/sprite.svg#icon-location'></use>
+                  </svg>
+               </div>
+               <div class="delivery-info__info info-delivery">
+                  <div class="info-delivery__title">
+                     <div class="info-delivery__image" aria-hidden='true'>
+                        <svg class='icon-chopsticks'>
+                           <use href='./sprites/sprite.svg#icon-chopsticks'></use>
+                        </svg>
+                        <span>2</span>
+                     </div>
+                     <h2 class="info-delivery__text">Параметри доставка</h2>
+                  </div>
+                  <div class="info-delivery__content">
+                     <p>
+                        Сервіс доставки суші «Рікша» пропонує надзвичайно зручний механізм доставки та оплати.
+                        Ми вважаємо, що наші стандарти роботи мають бути класикою та комфортом для замовника.
+                        <strong> Прийом замовлень на доставку з 11:00 до 22:30.</strong>
+                     </p>
+                     <p>
+                        Отже, почнемо з доставки. Ми ділимо район Києва на зони доставки – зелену та жовту.
+                        Для кожної зони ми чітко визначаємо час приїзду кур'єра і у разі затримки Ви отримуєте приємний сюрприз,
+                        про який ми поговоримо трохи згодом. Для кожної із зон доставка є абсолютно безкоштовною.
+                     </p>
+                     <p>
+                        Доставка в зелену зону - до 29 хвилин (з 10:00 до 23:00. Інший час доставка в зелену зону до 59 хвилин).
+                        Доставка у жовту зону – до 59 хвилин. Ми дуже цінуємо Ваш час, тому завжди намагаємось
+                        вкластися в мінімальні терміни і вимірювати час хвилинами, адже кожна хвилина важлива. Погодьтеся,
+                        приємно отримати смачні суші протягом 29 хвилин, правда?
+                     </p>
+                     <p>
+                        Якщо кур'єр спізнюється, Ви отримуєте не тільки вибачення, а й промокод на безкоштовний рол під час наступного замовлення!
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="payment">
+            <div class="payment__container">
+               <h2 class="payment__title">
+                  <span> Оплата</span>
+                  <svg class='icon-cup' aria-hidden='true'>
+                     <use href='./sprites/sprite.svg#icon-cup'></use>
+                  </svg>
+               </h2>
+               <ul class="payment__items">
+                  <li class="payment__item item-payment">
+                     <div class="item-payment__icon">
+                        <svg class='icon-cash' aria-hidden='true'>
+                           <use href='./sprites/sprite.svg#icon-cash'></use>
+                        </svg>
+                     </div>
+                     <h3 class="item-payment__title">Оплата готівкої</h3>
+                     <p class="item-payment__text">Розраховуйтесь за свої улюблені суші Рікша готівкою при отриманні.</p>
+                  </li>
+                  <li class="payment__item item-payment">
+                     <div class="item-payment__icon">
+                        <svg class='icon-cards' aria-hidden='true'>
+                           <use href='./sprites/sprite.svg#icon-cards'></use>
+                        </svg>
+                     </div>
+                     <h3 class="item-payment__title">Оплата онлайн</h3>
+                     <p class="item-payment__text">Розраховуйтесь за свої улюблені суші Рікша онлайн на сайті.</p>
+                  </li>
+                  <li class="payment__item item-payment">
+                     <div class="item-payment__icon">
+                        <svg class='icon-bonus' aria-hidden='true'>
+                           <use href='./sprites/sprite.svg#icon-bonus'></use>
+                        </svg>
+                     </div>
+                     <h3 class="item-payment__title">Оплата бонусами</h3>
+                     <p class="item-payment__text">Розраховуйтесь за свої улюблені суші Рікша особистими бонусами.</p>
+                  </li>
+               </ul>
+               <div class="payment__text">
+                  <p>
+                     Ми пропонуємо Вам 3 найпоширеніші варіанти для розрахунку:
+                     готівка, оплата онлайн або бонусами. Просто відзначте найбільш зручний для Вас
+                     спосіб оплати при оформленні замовлення на сайті або повідомте про це оператора по телефону.
+                  </p>
+                  <p>
+                     Доставка «Рікша» – це чіткі стандарти роботи, високий рівень сервісу та піклування про кожного гостя.
+                     Ми щодня розвиваємося, щоб почути три слова «Рікша – це кохання».
+                  </p>
+               </div>
+            </div>
+         </section>
+      </main>
+      @@include('templates/footer.html', { })
+       @@include('templates/modal.html', { })
+   </div>
+   <script type="module" src="./js/app.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="uk">
+@@include('templates/head.html', { 'title': 'Замовлення' })
+
+<body>
+   <div class="wrapper">
+      @@include('templates/header.html', { })
+      <main>
+         <div class="page-navigation">
+            <div class="page-navigation__container">
+               <a href="catalog.html">
+                  <svg class='icon-arrow' aria-hidden='true'>
+                     <use href='./sprites/sprite.svg#icon-arrow'></use>
+                  </svg>
+                  Повернутись до каталогу
+               </a>
+            </div>
+         </div>
+         <section class="product">
+            <div class="product__container">
+               <div class="product__body">
+                  <div class="product__slider-outer">
+                     <div class="product__slider slider-product">
+                        <div class="slider-product__wrapper">
+                           <div class="slider-product__slide slide-product">
+                              <div class="slide-product__image _imw">
+                                 <img src="./img/content/sushi/img1.png" alt="Філадельфія">
+                              </div>
+                           </div>
+                           <div class="slider-product__slide slide-product">
+                              <div class="slide-product__image _imw">
+                                   <img src="./img/content/sushi/img1.png" alt="Філадельфія">
+                              </div>
+                           </div>
+                           <div class="slider-product__slide slide-product">
+                              <div class="slide-product__image _imw">
+                                 <img src="./img/content/sushi/img1.png" alt="Філадельфія">
+                              </div>
+                           </div>
+                        </div>
+                        <button class="slider-product__button slider-product__button_prev button-slider" type="button">
+                           <svg class='icon-arrow' aria-hidden='true'>
+                              <use href='./sprites/sprite.svg#icon-arrow'></use>
+                           </svg>
+                        </button>
+                        <button class="slider-product__button slider-product__button_next button-slider" type="button">
+                           <svg class='icon-arrow' aria-hidden='true'>
+                              <use href='./sprites/sprite.svg#icon-arrow'></use>
+                           </svg>
+                        </button>
+                     </div>
+                  </div>
+                  <div class="product__content product-content">
+                     <h1 class="product-content__title">Ролл "Філадельфія"</h1>
+                     <div class="product-content__info">
+                        <dl class="product-content__weight">
+                           <dt>Вага:</dt>
+                           <dd>200 грам</dd>
+                        </dl>
+                        <dl class="product-content__tabel">
+                           <div>
+                              <dt>Білки</dt>
+                              <dd>7,5 г</dd>
+                           </div>
+                           <div>
+                              <dt>Вуглеводи</dt>
+                              <dd>16,6 г</dd>
+                           </div>
+                           <div>
+                              <dt>Жири</dt>
+                              <dd>3,8 г</dd>
+                           </div>
+                           <div>
+                              <dt>Калорійність</dt>
+                              <dd>213 Ккал</dd>
+                           </div>
+                        </dl>
+                     </div>
+                     <div class="product-content__delivery">
+                        <div class="product-content__time">
+                           <svg class='icon-delivery' aria-hidden='true'>
+                              <use href='./sprites/sprite.svg#icon-delivery'></use>
+                           </svg>
+                           <p>Доставимо за <span>40</span> хв</p>
+                        </div>
+                        <a href="#" class="product-content__delivery-terms">Умови доставки</a>
+                     </div>
+                     <dl class="product-content__ingridients">
+                        <dt>Склад:</dt>
+                        <dd>Лосось, сир "Філадельфія", огірок, авокадо</dd>
+                     </dl>
+                     <div class="product-content__control control-product">
+                        <div class="control-product__price">
+                           <p class="control-product__old-price"><span>169</span> грн</p>
+                           <p class="control-product__new-price"><span>119</span> грн</p>
+                        </div>
+                        <div class="control-product__quantity quantity-product">
+                           <button class="quantity-product__remove" type="button">-</button>
+                           <span class="quantity-product__current">1</span>
+                           <button class="quantity-product__add" type="button">+</button>
+                        </div>
+                        <a href="cart.html" class="control-product__order button-main">Замовити</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="also">
+            <div class="also__container">
+               <div class="also__image-decor _imw">
+                  <img src="./img/decor/bg-gate.png" alt="фон">
+               </div>
+               <h2 class="also__title">З цим товаром також купляють</h2>
+               <div class="also__body">
+                  <article class="also__item item-also">
+                     <div class="item-also__image _imw">
+                        <img src="./img/content/card/img1.png" alt="coca-cola">
+                     </div>
+                     <div class="item-also__info">
+                        <div class="item-also__description">0.5 л</div>
+                        <h3 class="item-also__title">Coca-Cola 0.5</h3>
+                     </div>
+                     <div class="item-also__footer">
+                        <div class="item-also__price">
+                           <div class="item-also__old-price"><span>39</span> грн</div>
+                           <div class="item-also__new-price"><span>29</span> грн</div>
+                        </div>
+                        <button class="also__button button-main" type="button">Замовити</button>
+                     </div>
+                  </article>
+                  <article class="also__item item-also">
+                     <div class="item-also__image _imw">
+                        <img src="./img/content/card/img2.png" alt="BONAQUA негаз.">
+                     </div>
+                     <div class="item-also__info">
+                        <div class="item-also__description">0.33 л</div>
+                        <h3 class="item-also__title">BONAQUA негаз.</h3>
+                     </div>
+                     <div class="item-also__footer">
+                        <div class="item-also__price">
+                           <div class="item-also__old-price"><span>49</span> грн</div>
+                           <div class="item-also__new-price"><span>39</span> грн</div>
+                        </div>
+                        <button class="also__button button-main" type="button">Замовити</button>
+                     </div>
+                  </article>
+                  <article class="also__item item-also">
+                     <div class="item-also__image _imw">
+                        <img src="./img/content/card/img3.png" alt="Dr Pepper вишня">
+                     </div>
+                     <div class="item-also__info">
+                        <div class="item-also__description">0.33 л</div>
+                        <h3 class="item-also__title">Dr Pepper вишня</h3>
+                     </div>
+                     <div class="item-also__footer">
+                        <div class="item-also__price">
+                           <div class="item-also__old-price"><span>29</span> грн</div>
+                           <div class="item-also__new-price"><span>25</span> грн</div>
+                        </div>
+                        <button class="also__button button-main" type="button">Замовити</button>
+                     </div>
+                  </article>
+               </div>
+            </div>
+         </section>
+         <section class="recomends">
+            <div class="recomends__container">
+               <h2 class="recomends__title">Рекомендуємо спробувати</h2>
+               <div class="recomends__body">
+                  <article class=" product-item">
+                     <ul class=" product-item__label-desc">
+                        <li class="_imw" tabindex="0" aria-label="гострий">
+                           <img src="./img/content/labels/paper.svg" alt="гострий">
+                        </li>
+                        <li class="_imw" tabindex="0" aria-label="гарячий">
+                           <img src="./img/content/labels/hot.svg" alt="гарячий">
+                        </li>
+                        <li class="_imw" tabindex="0" aria-label="веганський">
+                           <img src="./img/content/labels/vegan.svg" alt="веганьский">
+                        </li>
+                     </ul>
+                     <div class=" product-item__label-type">
+                        <p class="product-item__new">NEW</p>
+                     </div>
+                     <a href="card.html" class=" product-item__image _imw">
+                        <img src='./img/content/sushi/img9.png' alt='роли'>
+                     </a>
+                     <div class=" product-item__main">
+                        <div class=" product-item__body">
+                           <div class=" product-item__info info-product">
+                              <div class="info-product__weight">
+                                 <span>200 грам</span>
+                                 <span>130 Ккал</span>
+                              </div>
+                           </div>
+                           <h2 class=" product-item__name">Ролл "Філадельфія"</h2>
+                           <div class=" product-item__products">Лосось, сир "Філадельфія", огірок, авокадо</div>
+                        </div>
+                        <div class=" product-item__footer">
+                           <div class="product-item__price">
+                              <p class="product-item__old-price"><span>224</span> грн</p>
+                              <p class="product-item__new-price"><span>179</span> грн</p>
+                           </div>
+                           <a href="card.html" class=" product-item__button button-main">Замовити</a>
+                        </div>
+                     </div>
+                  </article>
+                  <article class=" product-item">
+                     <ul class=" product-item__label-desc">
+                        <li class="_imw" tabindex="0" aria-label="гострий">
+                           <img src="./img/content/labels/paper.svg" alt="гострий">
+                        </li>
+                        <li class="_imw" tabindex="0" aria-label="гарячий">
+                           <img src="./img/content/labels/hot.svg" alt="гарячий">
+                        </li>
+                        <li class="_imw" tabindex="0" aria-label="веганський">
+                           <img src="./img/content/labels/vegan.svg" alt="веганьский">
+                        </li>
+                     </ul>
+                     <div class=" product-item__label-type">
+                        <p class="product-item__new">NEW</p>
+                     </div>
+                     <a href="card.html" class=" product-item__image _imw">
+                        <img src='./img/content/sushi/img8.png' alt='роли'>
+                     </a>
+                     <div class=" product-item__main">
+                        <div class=" product-item__body">
+                           <div class=" product-item__info info-product">
+                              <div class="info-product__weight">
+                                 <span><span>200</span> грам</span>
+                                 <span><span>130</span> Ккал</span>
+                              </div>
+                           </div>
+                           <h2 class=" product-item__name">Ролл "Теріякі"</h2>
+                           <div class=" product-item__products">Лосось, сир "Філадельфія", огірок, авокадо</div>
+                        </div>
+                        <div class=" product-item__footer">
+                           <div class=" product-item__price">
+                              <p class=" product-item__old-price"><span>180</span> грн</p>
+                              <p class=" product-item__new-price"><span>128</span> грн</p>
+                           </div>
+                           <a href="card.html" class=" product-item__button button-main">Замовити</a>
+                        </div>
+                     </div>
+                  </article>
+                  <article class=" product-item">
+                     <ul class=" product-item__label-desc">
+                        <li class="_imw" tabindex="0" aria-label="гострий">
+                           <img src="./img/content/labels/paper.svg" alt="гострий">
+                        </li>
+                        <li class="_imw" tabindex="0" aria-label="гарячий">
+                           <img src="./img/content/labels/hot.svg" alt="гарячий">
+                        </li>
+                        <li class="_imw" tabindex="0" aria-label="веганський">
+                           <img src="./img/content/labels/vegan.svg" alt="веганьский">
+                        </li>
+                     </ul>
+                     <div class=" product-item__label-type">
+                        <p class="product-item__new">NEW</p>
+                     </div>
+                     <a href="card.html" class=" product-item__image _imw">
+                        <img src='./img/content/sushi/img7.png' alt='роли'>
+                     </a href="#">
+                     <div class=" product-item__main">
+                        <div class=" product-item__body">
+                           <div class=" product-item__info info-product">
+                              <div class="info-product__weight">
+                                 <span>200 грам</span>
+                                 <span>130 Ккал</span>
+                              </div>
+                           </div>
+                           <h2 class=" product-item__name">Ролл "Інь Янь"</h2>
+                           <div class=" product-item__products">Лосось, сир "Філадельфія", огірок, авокадо</div>
+                        </div>
+                        <div class=" product-item__footer">
+                           <div class=" product-item__price">
+                              <p class=" product-item__old-price"><span>210</span> грн</p>
+                              <p class=" product-item__new-price"><span>169</span> грн</p>
+                           </div>
+                           <a href="card.html" class=" product-item__button button-main">Замовити</a>
+                        </div>
+                     </div>
+                  </article>
+               </div>
+            </div>
+         </section>
+         <section class="comments">
+            <div class="comments__container">
+               <div class="comments__header">
+                  <div class="comments__titles">
+                     <h2 class="comments__title">
+                        Замовляли в нас раніше?
+                     </h2>
+                     <p class="comments__sub-title">Залишить відгук, допоможіть нам стати краще</p>
+                     <svg class='icon-like-roll' aria-hidden='true'>
+                        <use href='./sprites/sprite.svg#icon-like-roll'></use>
+                     </svg>
+                  </div>
+                  <button class="comments__button button-main" 
+                  type="button" 
+                  aria-controls="modal-comments" 
+                  aria-expanded="false"  
+                  aria-label="Кнопка відкриває модальне вікно" 
+                  data-modal='modal-comments'>Залишити відгук</button>
+               </div>
+               <div class="comments__body">
+                  <article class="comments__item item-comments">
+                     <div class="item-comments__info">
+                        <div class="item-comments__avatar">
+                           <img src="./img/content/card/avatar1.png" alt="аватар">
+                        </div>
+                        <p class="item-comments__name">Яна Коваленко</p>
+                        <time class="item-comments__data" datetime="2022-02-12">12.02.2022</time>
+                     </div>
+                     <div class="item-comments__content">
+                        <div class="item-comments__rating rating" data-rating-value="4">
+                           <div class="rating__bar">
+                              <svg class="icon-stars main-starts">
+                                 <use href="./sprites/sprite.svg#icon-stars"></use>
+                              </svg>
+                           </div>
+                           <svg class="icon-stars">
+                              <use href="./sprites/sprite.svg#icon-stars"></use>
+                           </svg>
+                        </div>
+                        <p class="item-comments__text">
+                           Суші дуже смачні! Любимо з чоловіком «запечений сет» 🤤
+                           Доставка завжди своєчасна. Кур'єри привітні. Зручний сайт, великий вибір.
+                           Велика пляшка соусу, завжди в пакетику є серветки. Для нас це однозначно «доставка суші» №1!
+                        </p>
+                     </div>
+                     <div class="item-comments__image _imw">
+                        <img src="./img/content/card/img4.jpg" alt="суши">
+                     </div>
+                  </article>
+                  <article class="comments__item item-comments">
+                     <div class="item-comments__info">
+                        <div class="item-comments__avatar">
+                           <img src="./img/content/card/avatar2.png" alt="аватар">
+                        </div>
+                        <p class="item-comments__name">Марина Жук</p>
+                        <time class="item-comments__data" datetime="2022-01-20">20.01.2022</time>
+                     </div>
+                     <div class="item-comments__content">
+                        <div class="item-comments__rating rating" data-rating-value="5">
+                           <div class="rating__bar">
+                              <svg class="icon-stars main-starts">
+                                 <use href="./sprites/sprite.svg#icon-stars"></use>
+                              </svg>
+                           </div>
+                           <svg class="icon-stars">
+                              <use href="./sprites/sprite.svg#icon-stars"></use>
+                           </svg>
+                        </div>
+                        <p class="item-comments__text">
+                           Дуже смачно, завжди у вас беру! Задоволена швидкістю доставки та смаком) Рекомендую!
+                        </p>
+                     </div>
+                     <div class="item-comments__image _imw">
+                     </div>
+                  </article>
+               </div>
+            </div>
+         </section>
+      </main>
+      @@include('templates/footer.html', { })
+      @@include('templates/modal.html', { })
+      @@include('templates/modal-comments.html', { })
+   </div>
+   <script type="module" src="./js/app.min.js"></script>
+</body>
+
+</html>

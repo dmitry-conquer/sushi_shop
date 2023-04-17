@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="uk">
+@@include('templates/head.html', { 'title': '404 - Як ви сюди потрапили?' })
+
+<body>
+   <div class="wrapper">
+      @@include('templates/header.html', { })
+      <main>
+         <section class="not-found">
+            <div class="not-found__container">
+               <div class="not-found__inner">
+                  <div class="not-found__image _imw">
+                     <img src="./img/content/404/img1.png" alt="помилка 404">
+                  </div>
+                  <div class="not-found__content">
+                     <h1 class="not-found__title">Ой-ой! Ви заблукали!</h1>
+                     <p class="not-found__text">
+                        Сторінка, яку ви шукаєте, не існує. Як ви сюди потрапили - загадка.
+                        Але ви можете натиснути кнопку нижче, щоб повернутися на головну сторінку
+                     </p>
+                     <a href="index.html" class="not-found__button button-main">На головну</a>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+      @@include('templates/footer.html', { })
+      @@include('templates/modal.html', { })
+   </div>
+   <script type="module" src="./js/app.min.js"></script>
+</body>
+
+</html>
